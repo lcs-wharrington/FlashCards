@@ -28,7 +28,9 @@ struct ContentView: View {
             
             // Input
             Button(action: {
-                print("Button was pressed")
+                // show answer
+                isAnswerShowing = true
+                
             }, label: {
                 Text("Check")
             })
@@ -38,12 +40,18 @@ struct ContentView: View {
             Text(currentCard.answer)
                 .font(.title)
                 .bold()
-            //           opacity          T≈rue  False
+            //           opacity          True  False
                 .opacity(isAnswerShowing ? 1.0 : 0.0)
             
             //Input
             Button(action: {
+                
+                // hide answer
+                isAnswerShowing = false
+                
+                // pick a new card
                 currentCard = listOfCards.randomElement()!
+                
             }, label: {
                 Text("Another")
             })
