@@ -28,8 +28,10 @@ struct ContentView: View {
             
             // Input
             Button(action: {
-                // show answer
-                isAnswerShowing = true
+                withAnimation{
+                    // show answer
+                    isAnswerShowing = true
+                }
                 
             }, label: {
                 Text("Check")
@@ -49,8 +51,11 @@ struct ContentView: View {
                 // hide answer
                 isAnswerShowing = false
                 
-                // pick a new card
-                currentCard = listOfCards.randomElement()!
+                withAnimation{
+                    // pick a new card
+                    currentCard = listOfCards.randomElement()!
+                }
+                
                 
             }, label: {
                 Text("Another")
@@ -72,5 +77,6 @@ struct ContentView_Previews: PreviewProvider {
         NavigationView {
             ContentView()
         }
+        .preferredColorScheme(.dark)
     }
 }
