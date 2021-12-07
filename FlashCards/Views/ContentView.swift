@@ -11,16 +11,19 @@ struct ContentView: View {
     
     
     // MARK: Stored properties
-    var currentCard: Card = listOfCards.randomElement()!
+    @State var currentCard: Card = listOfCards.randomElement()!
     
+    // MARK: Computed properties
     var body: some View {
         VStack(spacing: 25){
             
-            Text("What is the \"powerhouse\" of the cell")
+            // Output
+            Text(currentCard.question)
                 .font(.largeTitle)
                 .bold()
                 .padding()
             
+            // Input
             Button(action: {
                 print("Button was pressed")
             }, label: {
@@ -28,12 +31,14 @@ struct ContentView: View {
             })
             .buttonStyle(.bordered)
             
-            Text("Mitocondria")
+            // Output
+            Text(currentCard.answer)
                 .font(.title)
                 .bold()
             
+            //Input
             Button(action: {
-                print("Button was pressed")
+                currentCard = listOfCards.randomElement()!
             }, label: {
                 Text("Another")
             })
