@@ -11,6 +11,7 @@
 		EA639DB6275FE9D900A12370 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA639DB5275FE9D900A12370 /* ContentView.swift */; };
 		EA639DB8275FE9DB00A12370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA639DB7275FE9DB00A12370 /* Assets.xcassets */; };
 		EA639DBB275FE9DB00A12370 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA639DBA275FE9DB00A12370 /* Preview Assets.xcassets */; };
+		EA639DC4275FEBFB00A12370 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA639DC3275FEBFB00A12370 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		EA639DB5275FE9D900A12370 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA639DB7275FE9DB00A12370 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA639DBA275FE9DB00A12370 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA639DC3275FEBFB00A12370 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				EA639DB3275FE9D900A12370 /* FlashCardsApp.swift */,
-				EA639DB5275FE9D900A12370 /* ContentView.swift */,
+				EA639DC2275FEBC800A12370 /* Views */,
+				EA639DC1275FEBBC00A12370 /* Model */,
 				EA639DB7275FE9DB00A12370 /* Assets.xcassets */,
 				EA639DB9275FE9DB00A12370 /* Preview Content */,
 			);
@@ -65,6 +68,22 @@
 				EA639DBA275FE9DB00A12370 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EA639DC1275FEBBC00A12370 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA639DC3275FEBFB00A12370 /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA639DC2275FEBC800A12370 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA639DB5275FE9D900A12370 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA639DB6275FE9D900A12370 /* ContentView.swift in Sources */,
+				EA639DC4275FEBFB00A12370 /* Card.swift in Sources */,
 				EA639DB4275FE9D900A12370 /* FlashCardsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
