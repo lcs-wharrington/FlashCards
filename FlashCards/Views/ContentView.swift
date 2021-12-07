@@ -13,6 +13,9 @@ struct ContentView: View {
     // MARK: Stored properties
     @State var currentCard: Card = listOfCards.randomElement()!
     
+    // Coltols weather answer is showing
+    @State var isAnswerShowing = false
+    
     // MARK: Computed properties
     var body: some View {
         VStack(spacing: 25){
@@ -35,6 +38,8 @@ struct ContentView: View {
             Text(currentCard.answer)
                 .font(.title)
                 .bold()
+            //           opacity          T≈rue  False
+                .opacity(isAnswerShowing ? 1.0 : 0.0)
             
             //Input
             Button(action: {
@@ -43,6 +48,8 @@ struct ContentView: View {
                 Text("Another")
             })
                 .buttonStyle(.bordered)
+                .opacity(isAnswerShowing ? 1.0 : 0.0)
+            
             
             Spacer()
             
